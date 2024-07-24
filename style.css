@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+button {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border-color: white;
+}
+
+.display-row {
+    grid-area: display;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: right;
+    width: 300px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.row-1 {
+    grid-area: one;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 300px;
+}
+
+.row-2 {
+    grid-area: two;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 300px;
+}
+
+.row-3 {
+    grid-area: three;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 300px;
+}
+
+.row-4 {
+    grid-area: four;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 300px;
+}
+
+.row-5 {
+    grid-area: five;
+    grid-template-columns: 3fr 1fr;
+    width: 300px;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+    display: grid;
+    gap: 0px;
+}
+
+.calculator {
+    display: grid;
+    min-width: 50%;
+    min-height: 40vh;
+    margin: 20px;
+    grid-template-areas:
+        "display display display display"
+        "one one one one"
+        "two two two two"
+        "three three three three"
+        "four four four four"
+        "five five five five";
+}
+
+.number-button,
+.clear-button,
+.backspace-button {
+    background-color: aquamarine;
+}
+
+.operator-button {
+    background-color: orange;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+button:active {
+    background-color: greenyellow;
+}
